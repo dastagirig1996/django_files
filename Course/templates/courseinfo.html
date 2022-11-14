@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(115, 168, 133);
+            color: rgb(5, 8, 160);
+            text-align: center;
+            font-family: 'Segoe UI';
+
+        }
+
+
+    </style>
+    <!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+</head>
+<body>
+<h2>Course Information:</h2>
+Name: {{name}} Duration: {{du}} Total Seats: {{st}} 
+<h4>title:</h4>
+{{name|capfirst}} 
+<h4>default:</h4>
+{{name|default:'nothing'}} 
+<h4>length :</h4>
+{{name|length}} 
+<h4>lowercase :</h4>
+{{name|lower}}
+<h4>uppercase :</h4>
+{{name|upper}} 
+<h4>slicing :</h4>
+{{name|slice:"2"}} 
+<h4>truncate charecters :</h4>
+{{name|truncatechars:3}}
+<h4>truncte words :</h4>
+{{name|truncatewords:2}} 
+<h4>date :</h4>
+{{dt}} 
+<h4>date format of D d M Y :</h4>
+{{dt|date:"D d M Y"}} 
+<h4>time forma of H:i :</h4>
+{{dt|time:"H:i"}} 
+
+<h4>Short date format:</h4>
+{{dt|date:"SHORT_DATE_FORMAT"}} 
+<h4>Time format :</h4>
+{{dt|time:"TIME_FORMAT"}} 
+<h4>float Values:</h4>
+{{p1}}
+{{p2}}
+{{p3}} <br>
+<h4>floatformat :</h4>
+{{p1|floatformat}}
+{{p2|floatformat}}
+{{p3|floatformat}} 
+<h4>floatformat 3 :</h4>
+{{p1|floatformat:3}}
+{{p2|floatformat:3}}
+{{p3|floatformat:3}}
+<h4>floatformat 0 :</h4>
+{{p1|floatformat:0}}
+{{p2|floatformat:0}}
+{{p3|floatformat:0}} 
+<h4>floatformat -3 :</h4>
+{{p1|floatformat:-3}}
+{{p2|floatformat:-3}}
+{{p3|floatformat:-3}}
+
+<h4> Example 7</h4>
+{% if name == 'Django' %}
+<h2>Hello {{name}}</h2>
+{% endif %}
+
+{% if name == 'Django' and seat == 5 %}
+<h2>{{seat}} are avilable in {{name}}</h2>
+{% endif %}
+
+<h4> Example 9</h4>
+{{names}}
+
+{% for i in names %}
+{{i}},
+{%endfor%}
+
+<h4> Example 10</h4>
+{{student.stu1.name}}<br>
+
+{% for k,v in student.items %}
+Name :{{v.name}}, Roll No:{{v.roll}}<br>
+{% endfor %}
+
+
+<h4> Example 11</h4>
+Name : {{data.name}}, Roll No : {{data.roll}}
+
+<h4> Example 12</h4>
+{% for v in data.values %}
+Name :{{v.name}}, Roll No:{{v.roll}}<br>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addition</title>
+    <style>
+        body{
+              background-color:rgb(40, 142, 182) ;
+              color: rgb(236, 24, 130);
+              text-align: center;
+              font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+    </style>
+</head>
+<body>
+    <form action="result" >
+        <H3 style= 'color: rgb(236, 210, 10)'> CALCULATOR </H3>
+        Enter Frist  number <input type="text" name="n1"><br><br>
+        Enter Second number <input type="text" name="n2"><br><br>
+        <button type="submit" name="Add">ADD</button>
+        <button type="submit" name="Sub">SUB</button>
+        <button type="submit" name="Mul">MUL</button>
+        <button type="submit" name="Div">DIV</button>
+        
+    </form>
+    
+    <div style= 'color: rgb(10, 90, 21)'>
+    {% if ad %}
+    The Addition of two numers is {{ad}}
+    {% elif su %}
+    The Substraction of two numers is {{su}}
+    {% elif mu %}
+    The Multiplication of two numers is {{mu}}
+    {% elif di %}
+    The Division of two numers is {{di}}
+    {% else %}
+    {{c}}
+    {% endif %}
+    
+    </div>
+    <p style="font-size:10;color: rgb(121, 99, 114)">To run multiple operations use backarrow</p>
+
+
+
+<!-- 
+    <form action="addition">
+        
+        <input type="submit" value="Add">
+     </form>
+    
+     <form action="substraction">
+        <input type="submit" value="Sub">
+     </form> -->
+    
+</body>
+</html>
